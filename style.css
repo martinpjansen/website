@@ -1,0 +1,34 @@
+:root{--sans:"Helvetica Neue",Helvetica,Arial,sans-serif;--bg:#EBEDEC;--paper:#F5F6F5;--ink:#1D2622;--muted:#5C6661;--rule:#CFD4D1;--accent:#1F5B3A;--accent-bg:#DCE9E1}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:1.0625rem/1.65 var(--sans)}
+a{color:var(--accent);text-underline-offset:.18em}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.top{background:#173F2A;position:sticky;top:0;z-index:5}
+.bar{max-width:62rem;margin:0 auto;padding:.9rem 1.5rem;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.5rem 2rem;font-family:var(--sans)}
+.name{font:600 1.2rem var(--sans);color:#F3F7F4;text-decoration:none}
+nav{display:flex;flex-wrap:wrap;gap:.25rem 1.5rem;font-size:.92rem}
+nav a{color:#CFE2D6;text-decoration:none;padding:.2rem 0;border-bottom:2px solid transparent}
+nav a:hover{color:#fff}
+nav a[aria-current]{color:#fff;border-bottom-color:#9FD0B1;font-weight:500}
+.top a:focus-visible{outline-color:#fff}
+main{max-width:46rem;margin:0 auto;padding:3rem 1.5rem 4rem}
+.intro{display:flex;gap:2.5rem;align-items:flex-start;justify-content:space-between;margin-bottom:3rem}
+.intro>div{flex:1}
+.portrait{width:12.5rem;height:15rem;object-fit:cover;border-radius:6px;flex:none}
+.intro h1{font:600 2rem/1.25 var(--sans);margin:0 0 .6rem}
+.intro .role{color:var(--muted);margin:0 0 .8rem}
+.intro .links{font:.92rem var(--sans);display:flex;flex-wrap:wrap;gap:.3rem 1.4rem;margin:0}
+h2{font:600 1.5rem/1.3 var(--sans);margin:0 0 1rem}
+section{margin-bottom:3rem}
+.lead{font-size:1.2rem}
+.strand{margin:0 0 1rem}
+.pubs{list-style:none;padding:0;margin:0}
+.pubs li{display:grid;grid-template-columns:3.2rem 1fr;gap:.5rem;padding:.75rem 0;border-top:1px solid var(--rule)}
+.pubs .yr{font:.85rem var(--sans);color:var(--muted);padding-top:.2rem}
+.pubs .me{font-weight:600}
+h3{font:600 1rem var(--sans);margin:1.6rem 0 .3rem;color:var(--accent)}
+ul.plain{padding-left:1.1rem;margin:.3rem 0}
+ul.plain li{margin:.45rem 0}
+@media (max-width:40rem){.intro{flex-direction:column-reverse}.portrait{width:10rem;height:12rem}main{padding-top:2rem}.pubs li{grid-template-columns:1fr;gap:0}}
